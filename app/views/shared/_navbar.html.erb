@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+  <div class="container">
+    <%= link_to root_path, class: "navbar-brand" do %>
+      <i class="fab fa-twitter text-primary" style="font-size: 1.5em;"></i>
+    <% end %>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <%= link_to tweets_path, class: "nav-link #{'active' if current_page?(tweets_path)}" do %>
+            <i class="fas fa-home"></i> Inicio
+          <% end %>
+        </li>
+      </ul>
+
+      <%= form_tag tweets_path, method: :get, class: "d-flex mx-auto" do %>
+        <div class="input-group">
+          <%= text_field_tag :search, params[:search], class: "form-control", placeholder: "Buscar tweets..." %>
+          <button class="btn btn-outline-primary" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      <% end %>
+
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <%= link_to new_tweet_path, class: "btn btn-primary rounded-pill" do %>
+            <i class="fas fa-plus"></i> Nuevo Tweet
+          <% end %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

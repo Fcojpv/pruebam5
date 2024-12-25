@@ -1,0 +1,27 @@
+<div class="card mb-3">
+  <div class="card-body">
+    <div class="d-flex align-items-start">
+      <div class="flex-shrink-0">
+        <img src="https://via.placeholder.com/48" class="rounded-circle" alt="avatar">
+      </div>
+      <div class="flex-grow-1 ms-3">
+        <h6 class="mb-1">
+          <span class="fw-bold">@<%= tweet.UserName %></span>
+          <small class="text-muted">· <%= time_ago_in_words(tweet.created_at) %></small>
+        </h6>
+        <p class="mb-2"><%= tweet.Description %></p>
+        <div class="btn-group">
+          <%= link_to tweet_path(tweet), class: "btn btn-sm btn-outline-secondary" do %>
+            <i class="far fa-comment"></i>
+          <% end %>
+          <%= link_to edit_tweet_path(tweet), class: "btn btn-sm btn-outline-secondary" do %>
+            <i class="fas fa-edit"></i>
+          <% end %>
+          <%= button_to tweet_path(tweet), method: :delete, class: "btn btn-sm btn-outline-danger", form: { data: { turbo_confirm: "¿Estás seguro?" } } do %>
+            <i class="fas fa-trash"></i>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
