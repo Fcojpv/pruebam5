@@ -5,7 +5,7 @@ class TweetsController < ApplicationController
   def index
     @tweets = Tweet.order(created_at: :desc)
     if params[:search].present?
-      @tweets = @tweets.where("description ILIKE ? OR username ILIKE ?", "%#{params[:search]}%", "%#{params[:search]}%")
+      @tweets = @tweets.where("\"Description\" ILIKE ? OR \"UserName\" ILIKE ?", "%#{params[:search]}%", "%#{params[:search]}%")
     end
     @tweets = @tweets.page(params[:page]).per(10)
   end

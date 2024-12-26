@@ -1,18 +1,5 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@charset "utf-8";
+
 
 :root {
   --twitter-background: #15202b;
@@ -25,10 +12,12 @@
   --twitter-form-bg: #253341;
 }
 
+
 body {
   background-color: var(--twitter-background);
   color: var(--twitter-text);
 }
+
 
 .navbar {
   background-color: var(--twitter-background) !important;
@@ -47,6 +36,7 @@ body {
   color: var(--twitter-primary);
 }
 
+
 .card {
   background-color: var(--twitter-card-bg);
   border: 1px solid var(--twitter-border);
@@ -58,6 +48,7 @@ body {
   border-color: var(--twitter-primary);
   transform: translateY(-2px);
 }
+
 
 .btn-primary {
   background-color: var(--twitter-primary);
@@ -83,9 +74,11 @@ body {
   color: var(--twitter-text);
 }
 
+
 .text-muted {
   color: var(--twitter-text-muted) !important;
 }
+
 
 .form-control {
   background-color: var(--twitter-form-bg);
@@ -104,6 +97,7 @@ body {
 .form-control::placeholder {
   color: var(--twitter-text-muted);
 }
+
 
 .page-link {
   background-color: var(--twitter-card-bg);
@@ -139,6 +133,7 @@ body {
   filter: invert(1) grayscale(100%) brightness(200%);
 }
 
+
 .twitter-icon {
   color: var(--twitter-primary);
   font-size: 1.5em;
@@ -148,6 +143,7 @@ body {
 .twitter-icon:hover {
   transform: scale(1.1);
 }
+
 
 .btn-group .btn {
   padding: 0.25rem 0.5rem;
@@ -163,6 +159,7 @@ body {
   margin-right: 0.25rem;
 }
 
+
 .avatar-img {
   width: 48px;
   height: 48px;
@@ -176,10 +173,12 @@ body {
   border-color: var(--twitter-primary);
 }
 
+
 .container {
   max-width: 1200px;
   padding: 1rem;
 }
+
 
 @media (max-width: 768px) {
   .container {
@@ -197,4 +196,4 @@ body {
   .btn-group .btn {
     padding: 0.15rem 0.35rem;
   }
-}
+} 
